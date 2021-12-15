@@ -7,23 +7,31 @@ void main() {
   var correctAns = false;
   var count = 0;
   var answer = Random().nextInt(100) + 1;
-
+  print('╔════════════════════════════════════════════');
+  print('║             GUESS THE NUMBER');
+  print('╟────────────────────────────────────────────');
   do {
-    count++;
-    stdout.write(count.toString() + ' Please Guess The Number : ');
+    stdout.write('║ Please Guess The Number : ');
     var guess = int.tryParse(stdin.readLineSync()!);
+
     if (guess != null) {
+      count++;
+
       if (guess == answer) {
         correctAns = true;
-        print('Total Count is ' + count.toString() + ' Time.');
-        stdout.write(answer.toString() + ' is correct.');
-      } else {
+        print('║ ➜' + answer.toString() + ' is correct ❤, Total Guess is ' + count.toString() + ' Time.');
+      }
+      else {
         if (guess > answer) {
-          print('--> ' + guess.toString() + ' is TOO HIGH.');
-        } else {
-          print('--> ' + guess.toString() + ' is TOO LOW.');
+          print('║ ➜ ' + guess.toString() + ' is TOO HIGH! ▲');
+        }
+        else {
+          print('║ ➜ ' + guess.toString() + ' is TOO LOW! ▼');
         }
       }
+      print('╟────────────────────────────────────────────');
     }
   } while (correctAns != true);
+  print('║                    END');
+  print('╚════════════════════════════════════════════');
 }
