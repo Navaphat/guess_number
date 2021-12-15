@@ -7,9 +7,11 @@ void main() {
   var correctAns = false;
   var count = 0;
   var answer = Random().nextInt(100) + 1;
+
   print('╔════════════════════════════════════════════');
   print('║             GUESS THE NUMBER');
   print('╟────────────────────────────────────────────');
+
   do {
     stdout.write('║ Please Guess The Number : ');
     var guess = int.tryParse(stdin.readLineSync()!);
@@ -29,9 +31,11 @@ void main() {
           print('║ ➜ ' + guess.toString() + ' is TOO LOW! ▼');
         }
       }
+
       print('╟────────────────────────────────────────────');
     }
-  } while (correctAns != true);
+  } while (!correctAns);
+
   print('║                    END');
   print('╚════════════════════════════════════════════');
 }
