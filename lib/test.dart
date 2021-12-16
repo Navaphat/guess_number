@@ -16,7 +16,7 @@ void main() {
     stdout.write('║ Please Guess The Number : ');
     var guess = int.tryParse(stdin.readLineSync()!);
 
-    if (guess != null) {
+    if (guess != null && guess >= 1 && guess <= 100) {
       count++;
 
       if (guess == answer) {
