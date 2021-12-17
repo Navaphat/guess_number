@@ -21,7 +21,7 @@ void main() {
 
       if (guess == answer) {
         correctAns = true;
-        print('║ ➜' + answer.toString() + ' is correct ❤, Total Guess is ' + count.toString() + ' Time.');
+        print('║ ➜ ' + answer.toString() + ' is correct ❤, Total Guess is ' + count.toString() + ' Time.');
       }
       else {
         if (guess > answer) {
